@@ -37,7 +37,6 @@ public class MyAuthenticationSuccessHandler extends JSONAuthentication implement
         UserDetails userDetails = (UserDetails) authentication.getPrincipal();
         SecurityContextHolder.getContext().setAuthentication(authentication);
         //
-        System.out.println("userDetails = " + userDetails);
         //取token
         //好的解决方案，登录成功后token存储到数据库中
         //只要token还在过期内，不需要每次重新生成

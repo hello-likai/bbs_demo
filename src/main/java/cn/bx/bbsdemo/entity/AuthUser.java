@@ -21,6 +21,11 @@ public class AuthUser implements UserDetails {
     public AuthUser() {
     }
 
+    public AuthUser(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
     public AuthUser(String username, String password, Collection<? extends GrantedAuthority> authorities) {
         this.username = username;
         this.password = password;

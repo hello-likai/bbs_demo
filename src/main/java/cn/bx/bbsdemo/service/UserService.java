@@ -6,6 +6,8 @@ import java.util.List;
 
 public interface UserService {
 
+    String login(User user) throws Exception;
+
     List<User> allUsers();
 
     void register(User user);

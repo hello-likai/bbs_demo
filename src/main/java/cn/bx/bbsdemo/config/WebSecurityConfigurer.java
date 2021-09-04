@@ -78,7 +78,8 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
         //第3步：请求权限配置
         //放行的请求：注册API请求，其它任何请求都必须经过身份验证.
         http.authorizeRequests()
-                .antMatchers(HttpMethod.POST,"/user/register").permitAll()
+                .antMatchers(HttpMethod.POST,"/users/register").permitAll()
+                .antMatchers(HttpMethod.POST,"/users/login").permitAll()
                 //ROLE_ADMIN可以操作任何事情
                 .antMatchers("/**").hasRole("ADMIN");
                 //同等上一行代码
