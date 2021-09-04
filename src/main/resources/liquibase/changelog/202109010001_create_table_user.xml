@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <property name="now" value="now()" dbms="h2"/>
+    <property name="now" value="now()" dbms="mysql"/>
+    <property name="autoIncrement" value="true"/>
+    <property name="floatType" value="float4" dbms="postgresql, h2"/>
+    <property name="floatType" value="float" dbms="mysql, oracle, mssql"/>
+    <!--
+        Added the entity orderDelivery.
+    -->
+    <!-- 这是一个创建表的语句 也可以直接写SQL语句 -->
+    <changeSet id="202109010001" author="lk">
+        <createTable tableName="tb_user" remarks="用户表">
+            <column name="id" type="int(20)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="varchar(22)" remarks="用户名">
+                <constraints nullable="true"/>
+            </column>
+            <column name="password" type="varchar(255)" remarks="用户密码">
+                <constraints nullable="true"/>
+            </column>
+            <column name="create_time" type="date" remarks="创建时间">
+                <constraints nullable="true"/>
+            </column>
+            <column name="update_time" type="date" remarks="更新时间">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

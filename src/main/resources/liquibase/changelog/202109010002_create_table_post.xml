@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <property name="now" value="now()" dbms="mysql"/>
+    <property name="autoIncrement" value="true"/>
+    <property name="floatType" value="float4" dbms="postgresql, h2"/>
+    <property name="floatType" value="float" dbms="mysql, oracle, mssql"/>
+
+    <!-- 这是一个创建表的语句 也可以直接写SQL语句 -->
+    <changeSet id="202109010002" author="lk">
+        <createTable tableName="tb_post" remarks="帖子">
+            <column name="id" type="int(20)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="user_id" type="int(20)" remarks="创建人id">
+                <constraints nullable="false"/>
+            </column>
+            <column name="title" type="varchar(22)" remarks="标题">
+                <constraints nullable="true"/>
+            </column>
+            <column name="content" type="varchar(255)" remarks="内容">
+                <constraints nullable="true"/>
+            </column>
+            <column name="create_time" type="date" remarks="创建时间">
+                <constraints nullable="true"/>
+            </column>
+            <column name="update_time" type="date" remarks="更新时间">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

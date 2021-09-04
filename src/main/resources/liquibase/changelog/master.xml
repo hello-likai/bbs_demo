@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!-- 这里写清楚更改数据的xml文件路径和名字 -->
+<!--    <include file="classpath:liquibase/changelog/202109010001_create_table_user.xml" relativeToChangelogFile="false"/>-->
+<!--    <include file="classpath:liquibase/changelog/202109010002_create_table_post.xml" relativeToChangelogFile="false"/>-->
+<!--    <include file="classpath:liquibase/changelog/202109010003_create_table_comment.xml" relativeToChangelogFile="false"/>-->
+</databaseChangeLog>
