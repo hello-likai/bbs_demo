@@ -1,5 +1,8 @@
 package cn.bx.bbsdemo.utils;
 
+/**
+ * 枚举类，列出了常量信息
+ */
 public enum ResultInfo {
 
 	/** 操作成功 **/
