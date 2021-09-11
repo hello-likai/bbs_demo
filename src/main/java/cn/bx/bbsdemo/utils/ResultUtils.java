@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * <p>返回数据
+ * 返回数据
  */
 public class ResultUtils {
 	
